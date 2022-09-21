@@ -1,6 +1,8 @@
-import React from "react";
-import { View, Text, StyleSheet, Button, TextInput } from "react-native";
-import { Card } from "../components/Card"
+import React, { useState} from "react";
+import { View, Text, StyleSheet, Button } from "react-native";
+import Input from "../components/input";
+import  Card  from "../components/card"
+import { colors } from "../constants/colors";
 const styles = StyleSheet.create({
     container:{
         flex:1,
@@ -47,26 +49,35 @@ const styles = StyleSheet.create({
 })
 
 const StartGameScreen = () =>{
+    const [number, setNumber] = useState("");
+    const onHandleChange = (text) => {
+        setNumber(text.replace(/[0-9]/g,""));
+    }
     return(
         <View style={StyleSheet.container}>
             <Text style={styles.title}>Comenzar juego</Text>
             <View style={styles.inputContainer}>
                <Card style={styles.inputContainer}>
                 <Text style={styles.label}>Elija un número</Text>
-                <TextInput style={styles.input}
+                <Input style={styles.input}
                  keyboardType="numeric" 
-                 maxLength="2"
+                 maxLength={2}
+                 blurOnSubmit
+                 autoCapitalize="none"
+                 autoCorrect={false}
+                 onChangeText={(text) => onHandleChange(text)}
+                 value={number}
                  />
                 <View style={styles.buttonContainer}>
                     <Button
                     title="Limpiar"
                     onPress={( () => null)}
-                    color= "#392F5A"
+                    color= {colors.amarillo}
                     />
                      <Button
                     title="Confirmar"
                     onPress={( () => null)}
-                    color= "#392F5A"
+                    color= {colors.amarillo}
                     />
                 </View>
                 </Card>
