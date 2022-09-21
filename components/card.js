@@ -1,6 +1,6 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-const styles = Stylesheet.create({
+const styles = StyleSheet.create({
     container:{
         shadowColor: "#9DD9D2",
         shadowOffset: {

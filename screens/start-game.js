@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, Button, TextInput } from "react-native";
-import Card from "./components/Card"
+import { Card } from "../components/Card"
 const styles = StyleSheet.create({
     container:{
         flex:1,
