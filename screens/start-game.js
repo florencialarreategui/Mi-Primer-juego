@@ -51,6 +51,7 @@ const StartGameScreen = () =>{
         <View style={StyleSheet.container}>
             <Text style={styles.title}>Comenzar juego</Text>
             <View style={styles.inputContainer}>
+               <Card style={styles.inputContainer}>
                 <Text style={styles.label}>Elija un número</Text>
                 <TextInput style={styles.input}
                  keyboardType="numeric" 
@@ -68,6 +69,7 @@ const StartGameScreen = () =>{
                     color= "#392F5A"
                     />
                 </View>
+                </Card>
             </View>
         </View>
     )
