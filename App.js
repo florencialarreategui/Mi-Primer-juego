@@ -1,20 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
+import header from "./components/header";
+import StartGameScreen from "./screens/start-game";
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#F4D06F',
+  
+  },
+});
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>mI</Text>
-      <StatusBar style="auto" />
+      <Header title="Adivina el numero"></Header>
+      <StartGamScreen/>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
