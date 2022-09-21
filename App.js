@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native';
-import header from "./components/header";
+import Header from "./components/header";
 import StartGameScreen from "./screens/start-game";
 const styles = StyleSheet.create({
   container: {
@@ -12,7 +12,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Header title="Adivina el numero"></Header>
-      <StartGamScreen/>
+      <StartGameScreen/>
     </View>
   );
 }
