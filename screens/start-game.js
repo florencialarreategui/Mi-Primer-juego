@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         with:"75%",
         marginHorizontal: 20,
         flexDirection: "row",
-        justifyContent:" space-around",
+        justifyContent:"space-around",
         marginTop: 20,
     }
 
