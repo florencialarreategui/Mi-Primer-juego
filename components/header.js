@@ -6,13 +6,13 @@ const styles = StyleSheet.create({
         height: 100,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: colors.amarillo,
+        backgroundColor: colors.violeta,
         padingTop: 20,
     },
     title: {
         fontSize: 20,
         color: "#FF8811",
-        fontWeight: "bold"
+        fontWeight: "bold",
     }
 })
 const Header = ({ title }) => {

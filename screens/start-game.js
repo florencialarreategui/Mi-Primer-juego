@@ -12,13 +12,16 @@ const styles = StyleSheet.create({
     },
     title:{
        fontSize:20,
-        color: "#FFF8F0",
+        color: colors.violeta,
         textAling:"center ",
         paddingVertical: 20,
+        fontWeight: "bold",
+        textAlign: "center"
+       
     },
     label: {
         fontSize:14,
-        color: "#392F5A",
+        color: colors.violeta,
         textAling:"center ",
         paddingVertical: 5,
     },
@@ -26,10 +29,11 @@ const styles = StyleSheet.create({
         justifyContent:"center",
         alignItems:"center",
         marginHorizontal: 20,
+        marginBottom: 30,
     },
     input:{
         width:"100%",
-        borderBottomColor: "#392F5A",
+        borderBottomColor: colors.celeste,
         borderBottomWidth:1,
         minWidth: 90,
         fontSize: 25,
@@ -38,10 +42,10 @@ const styles = StyleSheet.create({
         
     },
     buttonContainer:{
-        with:"75%",
-        marginHorizontal: 20,
+        marginHorizontal: 30,
+        marginVertical: 50,
         flexDirection: "row",
-        justifyContent:"space-around",
+        justifyContent:"space-between",
         marginTop: 20,
     }
 
@@ -93,15 +97,20 @@ const StartGameScreen = () =>{
                     <Button
                     title="Limpiar"
                     onPress={( () => null)}
-                    color= {colors.amarillo}
+                    color= {colors.violeta}
                     />
                      <Button
                     title="Confirmar"
                     onPress={( (onConfirm) => null)}
-                    color= {colors.amarillo}
+                    color= {colors.violeta}
                     />
                 </View>
                 </Card>
+                <Button
+                    title="JUGAR"
+                    onPress={( () => null)}
+                    color= {colors.violeta}
+                    />
                 {confirmedOutput}
             </View>
         </View>
