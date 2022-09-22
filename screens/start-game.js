@@ -50,9 +50,29 @@ const styles = StyleSheet.create({
 
 const StartGameScreen = () =>{
     const [number, setNumber] = useState("");
+    const [confirmed, setConfirmed] = useState(false);
+    const [selectedNumber, setSelectedNumber] = useState(0)
     const onHandleChange = (text) => {
-        setNumber(text.replace(/[0-9]/g,""));
+        setNumber(text.replace(/[^0-9]/g,""));
     }
+    const onConfirm = () =>{
+        const chosenNumber = parseInt (number, 10);
+        if(isNaN(chosenNumber)|| chosenNumber <=  0 || chosenNumber > 99);
+        setConfirmed(true);
+        setSelectedNumber(chosenNumber)
+        setNumber("");
+    }
+    const confirmedOutput = () =>confirmed && (
+        <Card style= {styles.summaryContainer}>
+            <Text style={styles.summaryText}> Tu elección</Text>
+            <Text style={styles.summaryText}> {selectedNumber}</Text>
+            <Button
+            title="Iniciar Juego"
+            onPress={() => null}
+            color= {colors.violeta} 
+            />
+        </Card>
+    )
     return(
         <TouchableWithoutFeedback onPress={() => Keyboard.dismiss()}>
         <View style={StyleSheet.container}>
@@ -77,11 +97,12 @@ const StartGameScreen = () =>{
                     />
                      <Button
                     title="Confirmar"
-                    onPress={( () => null)}
+                    onPress={( (onConfirm) => null)}
                     color= {colors.amarillo}
                     />
                 </View>
                 </Card>
+                {confirmedOutput}
             </View>
         </View>
        </TouchableWithoutFeedback>
