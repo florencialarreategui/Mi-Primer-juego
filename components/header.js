@@ -1,18 +1,18 @@
 import React from "react";
-import { NativeAppEventEmitter } from "react-native";
-import { View, Text, StyleSheet} from react-NativeAppEventEmitter;
+import { View, Text, StyleSheet} from "react-native";
+import { colors } from "../constants/colors"
 const styles = StyleSheet.create({
     header:{
         height: 100,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#9DD9D2",
+        backgroundColor: colors.amarillo,
         padingTop: 20,
     },
     title: {
         fontSize: 20,
         color: "#FF8811",
-        fntWeight: "bold"
+        fontWeight: "bold"
     }
 })
 const Header = ({ title }) => {
